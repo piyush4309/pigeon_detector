@@ -1,0 +1,6 @@
+dependencies:
+  espressif/coco_detect:
+    version: "*"
+    override_path: "../../../models/coco_detect"
+  espressif/esp32-camera:
+    version: "^2.1.8"
