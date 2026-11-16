@@ -1,0 +1,119 @@
+piyushpilania\@piyush esp-dl % cd examples/bird_detect                                
+
+piyushpilania\@piyush bird_detect % idf.py fullclean
+
+Executing action: fullclean
+
+**ERROR:** Directory '/Users/piyushpilania/development/pigeon_model/esp-dl/examples/bird_detect/build' doesn't seem to be a CMake build directory. Refusing to automatically delete files in this directory. Delete the directory manually to 'clean' it.
+
+piyushpilania\@piyush bird_detect % cd /Users/piyushpilania/development/pigeon_model/esp-dl/examples/bird_detect
+
+rm -rf build
+
+piyushpilania\@piyush bird_detect % idf.py fullclean                                                            
+
+Executing action: fullclean
+
+Build directory '/Users/piyushpilania/development/pigeon_model/esp-dl/examples/bird_detect/build' not found. Nothing to clean.
+
+Executing action: remove_managed_components
+
+Done
+
+piyushpilania\@piyush bird_detect % idf.py set-target esp32s3
+
+Adding "set-target"'s dependency "fullclean" to list of commands with default set of options.
+
+Executing action: fullclean
+
+Build directory '/Users/piyushpilania/development/pigeon_model/esp-dl/examples/bird_detect/build' not found. Nothing to clean.
+
+Executing action: set-target
+
+Set Target to: esp32s3, new sdkconfig will be created.
+
+Running cmake in directory /Users/piyushpilania/development/pigeon_model/esp-dl/examples/bird_detect/build
+
+Executing "cmake -G Ninja -B /Users/piyushpilania/development/pigeon_model/esp-dl/examples/bird_detect/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/Users/piyushpilania/.espressif/python_env/idf6.2_py3.14_env/bin/python -DESP_PLATFORM=1 -DIDF_TARGET=esp32s3 -DCCACHE_ENABLE=False -DCONFIGDEP_ENABLE=True /Users/piyushpilania/development/pigeon_model/esp-dl/examples/bird_detect"...
+
+CMake Warning (deprecated) at CMakeLists.txt:3 (cmake_minimum_required):
+
+  Compatibility with CMake < 3.10 will be removed from a future version of
+
+  CMake.
+
+  Update the VERSION argument \<min> value.  Or, use the \<min>...\<max> syntax
+
+  to tell CMake that the project requires at least \<min> but has been updated
+
+  to work with policies introduced by \<max> or earlier.
+
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+
+to suppress it.
+
+\-- Found Git: /usr/bin/git (found version "2.50.1 (Apple Git-155)")
+
+\-- Minimal build - OFF
+
+\-- esp-idf-configdep will be used for faster recompilation
+
+\-- Compiler launcher chain: esp-idf-configdep
+
+\-- The C compiler identification is GNU 16.1.0
+
+\-- The CXX compiler identification is GNU 16.1.0
+
+\-- The ASM compiler identification is GNU
+
+\-- Found assembler: /Users/piyushpilania/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc
+
+\-- Detecting C compiler ABI info
+
+\-- Detecting C compiler ABI info - done
+
+\-- Check for working C compiler: /Users/piyushpilania/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc - skipped
+
+\-- Detecting C compile features
+
+\-- Detecting C compile features - done
+
+\-- Detecting CXX compiler ABI info
+
+\-- Detecting CXX compiler ABI info - done
+
+\-- Check for working CXX compiler: /Users/piyushpilania/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ - skipped
+
+\-- Detecting CXX compile features
+
+\-- Detecting CXX compile features - done
+
+\-- Building ESP-IDF components for target esp32s3
+
+NOTE: Dependencies lock doesn't exist, solving dependencies.
+
+NOTE: Skipping optional dependency: espressif/esp32_p4_function_ev_board_noglib
+
+NOTE: Using component placed at /Users/piyushpilania/development/pigeon_model/esp-dl/models/bird_detect for dependency "espressif/bird_detect", specified in /Users/piyushpilania/development/pigeon_model/esp-dl/examples/bird_detect/main/idf_component.yml
+
+CMake Error at /Users/piyushpilania/development/pigeon_model/esp-idf/tools/cmake/build.cmake:717 (message):
+
+  **ERROR:** The override_path you're using is pointing to
+
+  directory "/Users/piyushpilania/development/pigeon_model/esp-dl" that is
+
+  not a component.
+
+Call Stack (most recent call first):
+
+  /Users/piyushpilania/development/pigeon_model/esp-idf/tools/cmake/project.cmake:904 (idf_build_process)
+
+  CMakeLists.txt:7 (project)
+
+
+
+\-- Configuring incomplete, errors occurred!
+
+**ERROR:** cmake failed with exit code 1, output of the command is in the /Users/piyushpilania/development/pigeon_model/esp-dl/examples/bird_detect/build/log/idf_py_stderr_output_30032 and /Users/piyushpilania/development/pigeon_model/esp-dl/examples/bird_detect/build/log/idf_py_stdout_output_30032
+
+piyushpilania\@piyush bird_detect % 

@@ -1,0 +1,9 @@
+## IDF Component Manager Manifest File
+
+dependencies:
+  espressif/bird_detect:
+    version: "^0.1.0"
+    override_path: "../../../models/bird_detect"
+
+  espressif/esp32-camera:
+    version: "^2.1.8"
